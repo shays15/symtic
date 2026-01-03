@@ -19,15 +19,15 @@ class MRI_Dataset(Dataset):
     def __init__(self, dir, mode='train'):
         self.mode = mode
         self.data_path = Path(dir)
-        (self.mprage_paths, self.ct_paths) = self._get_paths()
+        (self.mprage_paths, self.t2w_paths, self.flair_paths, self.fgaitr_paths) = self._get_paths()
 
         # Automatically calculate the number of slices based on the first image
         sample_img = nib.load(str(self.mprage_paths[0]))
 
     def _get_paths(self):
-        modalities = ["mprage", "ct"]
+        modalities = ["mprage", "t2w", "flair", "fgatir"]
         
-        mprage_paths, ct_paths = [], []
+        mprage_paths, t2w_paths, flair_paths, fgatir_paths = [], [], [], []
     
         for modality in modalities:
             # Get path to the current modality
@@ -54,10 +54,14 @@ class MRI_Dataset(Dataset):
                 if 0 <= slice_number <= 224 and orientation == 'sagittal': #testing
                     if modality == "mprage":
                         mprage_paths.append(img_path)
-                    elif modality == "ct":
-                        ct_paths.append(img_path)
+                    elif modality == "t2w":
+                        t2w_paths.append(img_path)
+                    elif modality == "flair":
+                        flair_paths.append(img_path)
+                    elif modality == "fgatir":
+                        fgatir_paths.append(img_path)
 
-        return mprage_paths, ct_paths
+        return mprage_paths, t2w_paths, flair_paths, fgatir_paths
         
     def __len__(self):
         return len(self.mprage_paths)
@@ -70,27 +74,29 @@ class MRI_Dataset(Dataset):
             return np.zeros_like(img)
         img = (img - min_val) / (max_val - min_val)
         return img
-    
-    def normalize_ct(self, img):
-        max_val = np.percentile(img, 99.5)
-        min_val = 0
-        img = (img + 1000) / (4000 + 1000)
-        return img
 
     def __getitem__(self, idx):
             
         mprage_img = nib.load(str(self.mprage_paths[idx])).get_fdata().astype(np.float32)
         mprage_img = self.normalize(mprage_img)
-
-        ct_img = nib.load(str(self.ct_paths[idx])).get_fdata().astype(np.float32)
-        ct_img = self.normalize_ct(ct_img)
+        
+        t2w_img = nib.load(str(self.t2w_paths[idx])).get_fdata().astype(np.float32)
+        t2w_img = self.normalize(t2w_img)
+        
+        flair_img = nib.load(str(self.flair_paths[idx])).get_fdata().astype(np.float32)
+        flair_img = self.normalize(flair_img)        
+        
+        fgatir_img = nib.load(str(self.fgatir_paths[idx])).get_fdata().astype(np.float32)
+        fgatir_img = self.normalize(fgatir_img)      
         
         mprage_2d = torch.tensor(mprage_img, dtype=torch.float32)
-        ct_2d = torch.tensor(ct_img, dtype=torch.float32)
+        t2w_2d = torch.tensor(t2w_img, dtype=torch.float32)
+        flair_2d = torch.tensor(flair_img, dtype=torch.float32)
+        fgatir_2d = torch.tensor(fgatir_img, dtype=torch.float32)
 
         
-        img = torch.stack([mprage_2d], dim=0)
-        label = torch.stack([ct_2d], dim=0)
+        img = torch.stack([mprage_2d, t2w_2d, flair_2d], dim=0)
+        label = torch.stack([fgatir_2d], dim=0)
         
         return img, label
 
