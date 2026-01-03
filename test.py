@@ -75,7 +75,7 @@ def run_testing(input_path: str, output_path: str, pretrained_model: str, gpu: i
 def main():
     parser = argparse.ArgumentParser(description="Test the trained model on 3D T1w images.")
     parser.add_argument("input_path", type=str, help="Input path to 3D T1w image volume")
-    parser.add_argument("output_path", type=str, help="Output path for 3D CT image")
+    parser.add_argument("output_path", type=str, help="Output path for multi-TI image")
     parser.add_argument("pretrained_model", type=str, help="Path to the pretrained model weights")
     parser.add_argument("--gpu", type=int, default=0, help="GPU index to use (default: 0)")
 
