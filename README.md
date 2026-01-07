@@ -26,11 +26,13 @@ To generate a multi-TI images:
 
 ```bash
 python test.py \
-  --input-mprage-path /path/to/mprage_image.nii.gz \
-  --input-t2w-path /path/to/t2w_image.nii.gz \
-  --input-flair-path /path/to/flair_image.nii.gz \
-  --output-path /path/to/output.nii.gz
-  --gpu 0
+  --t1 *PATH_TO_INPUT_T1* \
+  --t2 *PATH_TO_INPUT_T2* \
+  --flair *PATH_TO_INPUT_FLAIR* \
+  --ti *DESIRED_TI_VALUE* \
+  --o *OUTPUT_DIRECTORY* \
+  --model *PATH_TO_SAVED_MODEL* \ 
+  --gpu *GPU_ID*
 ```
 
 ---
