@@ -37,7 +37,7 @@ python test.py \
 
 ## 🧠 Citation
 
-Savannah P. Hays, Lianrui Zuo, Anqi Feng, Yihao Liu, Blake E. Dewey, Jiachen Zhuo, Ellen M. Mowry, Scott D. Newsome, Jerry L. Prince, Aaron Carass, Synthetic multi-inversion time magnetic resonance images for visualization of subcortical structures, J. Med. Imag. 13(1), 014002 (2026), doi: 10.1117/1.JMI.13.1.014002.
+Savannah P. Hays, Lianrui Zuo, Anqi Feng, Yihao Liu, Blake E. Dewey, Jiachen Zhuo, Ellen M. Mowry, Scott D. Newsome, Jerry L. Prince, Aaron Carass, Synthetic multi-inversion time magnetic resonance images for visualization of subcortical structures, *J. Med. Imag.* **13**(1), 014002 (2026), doi: 10.1117/1.JMI.13.1.014002.
 
 ---
 
