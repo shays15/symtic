@@ -3,10 +3,11 @@
 ## 🚀 Getting Started
 
 This is the Github page assoicated with the paper "Synthetic multi-inversion time magnetic resonance images for visualization of subcortical structures".
-We provide inference code and pretrained weights running SyMTIC.
+We provide inference code and pretrained weights for running SyMTIC.
 If harmonization or imputation is required for out-of-distribution datasets, we recommend using HACA3 as shown in the paper.
 
-Model weights can be downloaded here: https://livejohnshopkins-my.sharepoint.com/:u:/g/personal/shays6_jh_edu/IQBIE87UIDmkTo3E_Dr6CC6mAVupjSDrLZVfgNCZWaXPS0o?e=1ChdsT
+Model weights can be downloaded [here](https://livejohnshopkins-my.sharepoint.com/:u:/g/personal/shays6_jh_edu/IQBIE87UIDmkTo3E_Dr6CC6mAVupjSDrLZVfgNCZWaXPS0o?e=1ChdsT)
+Paper links: [ArXiv](https://arxiv.org/pdf/2506.04173) & [SPIE Digital Library](https://doi.org/10.1117/1.JMI.13.1.014002)
 
 ### 🧠 Prerequisites
 - Python 3.10
@@ -35,10 +36,10 @@ python test.py \
 
 ## 🧠 Citation
 
-TODO
+Savannah P. Hays, Lianrui Zuo, Anqi Feng, Yihao Liu, Blake E. Dewey, Jiachen Zhuo, Ellen M. Mowry, Scott D. Newsome, Jerry L. Prince, Aaron Carass, Synthetic multi-inversion time magnetic resonance images for visualization of subcortical structures, J. Med. Imag. 13(1), 014002 (2026), doi: 10.1117/1.JMI.13.1.014002.
+
 ---
 
 ## 🙏 Acknowledgments
 
 This material is partially supported by the **Johns Hopkins University Percy Pierre Fellowship** (Hays) and the **National Science Foundation Graduate Research Fellowship** under Grant No. **DGE-2139757** (Hays).
-TODO
