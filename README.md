@@ -6,7 +6,8 @@ This is the Github page assoicated with the paper "Synthetic multi-inversion tim
 We provide inference code and pretrained weights for running SyMTIC.
 If harmonization or imputation is required for out-of-distribution datasets, we recommend using [HACA3](https://github.com/shays15/haca3) as shown in the paper.
 
-Model weights can be downloaded [here](https://livejohnshopkins-my.sharepoint.com/:u:/g/personal/shays6_jh_edu/IQBIE87UIDmkTo3E_Dr6CC6mAVupjSDrLZVfgNCZWaXPS0o?e=1ChdsT)
+Model weights can be downloaded [here](https://livejohnshopkins-my.sharepoint.com/:u:/g/personal/shays6_jh_edu/IQBIE87UIDmkTo3E_Dr6CC6mAVupjSDrLZVfgNCZWaXPS0o?e=1ChdsT).
+
 Paper links: [arXiv](https://arxiv.org/pdf/2506.04173) & [SPIE Digital Library](https://doi.org/10.1117/1.JMI.13.1.014002)
 
 ### 🧠 Prerequisites
