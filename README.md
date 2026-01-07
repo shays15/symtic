@@ -1,4 +1,5 @@
-# 📌 SyMTIC
+# 📌 Synthetic Multi-Inversion Time MR Contrasts (SyMTIC)
+![Description of image](fig2_methods_overview.png)
 
 ## 🚀 Getting Started
 
