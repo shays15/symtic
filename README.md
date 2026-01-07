@@ -42,4 +42,9 @@ Savannah P. Hays, Lianrui Zuo, Anqi Feng, Yihao Liu, Blake E. Dewey, Jiachen Zhu
 
 ## 🙏 Acknowledgments
 
-This material is partially supported by the **Johns Hopkins University Percy Pierre Fellowship** (Hays) and the **National Science Foundation Graduate Research Fellowship** under Grant No. **DGE-2139757** (Hays).
+This work was partially supported by the **National Science Foundation Graduate Research
+Fellowship** (Grant No. DGE-2139757 [S. P. Hays]) and **National Cancer Institute (NCI)** (Grant Nos.
+R01 CA253923 [L. Zuo] and R01 CA275015 [L. Zuo]). It was also supported by the **PCORI** (Grant
+No. MS-1610-37115 [PIs: S. D. Newsome and E. M. Mowry]). The statements in this publication
+are solely the responsibility of the authors and do not necessarily represent the views of PCORI,
+its Board of Governors, or Methodology Committee.
