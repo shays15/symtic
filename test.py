@@ -112,7 +112,7 @@ def run_testing(t1: str, t2: str, flair: str, ti: int, o: str, weights: str, gpu
             coronal_pdmap_volume = coronal_volume[:, 1, :, :]  # (num_slices, H, W)
             coronal_pdmap_volume = coronal_pdmap_volume.transpose(2,0,1)
             coronal_nifti_img_pd = nib.Nifti1Image(coronal_pdmap_volume, affine, header)
-            nib.save(sagittal_nifti_img_pd, Path(output_path) / f'{filename}_coronal_pdmap.nii.gz')
+            nib.save(coronal_nifti_img_pd, Path(output_path) / f'{filename}_coronal_pdmap.nii.gz')
 
             print(f"Computing median volume...")
             
